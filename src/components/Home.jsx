@@ -126,7 +126,7 @@ const handleSubmit = (event)=>{
   query({"inputs": data.searchName}).then((blob)=>{
     return blobToDataURL(blob,(dataURL)=>{
       // Use the dataURL as needed, for example, set it as the source of an image element
-      const imgElement = document.createElement('img');
+      const imgElement = document.getElementById("myData")
       imgElement.src = dataURL;
       getData(dataURL)
       dURL= dataURL;
@@ -159,7 +159,7 @@ const handleSubmit = (event)=>{
 
 <div className = "flex flex-grow flex-col w-full h-full my-2 border-4 box-border border-blue-600 border-opacity-75 align-middle">
   <div className='rounded-lg mx-auto w-fit h-screen'>
-    <img src={dURL} alt="" srcset={demo} className='h-auto transition-all duration-300 rounded-lg blur-sm hover:blur-none max-w-xs py-2 lg:max-w-md' />
+    <img id = "myData" src={dURL} alt="" srcset={demo} className='h-auto transition-all duration-300 rounded-lg blur-sm hover:blur-none max-w-xs py-2 lg:max-w-md' />
   </div>
     
 
