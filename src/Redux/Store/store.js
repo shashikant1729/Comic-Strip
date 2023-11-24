@@ -1,6 +1,7 @@
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import rootReducer from './reducers/Index';
+import rootReducer from '../Reducers/index';
+import {convertBlobToDataURL} from '../Actions/dataAction';
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
 
